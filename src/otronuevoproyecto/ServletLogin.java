@@ -27,7 +27,7 @@ import javax.servlet.http.HttpSession;
 		 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 		 */
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			response.sendRedirect("login.jsp");//shows login.jsp
+			response.sendRedirect("login.jsp");//servlet attach to login.jsp
 		}
 
 		/**
@@ -70,6 +70,7 @@ import javax.servlet.http.HttpSession;
 				response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
 				mysession.removeAttribute("error"); //only if you failed to put correct email & password
 				mysession.setAttribute ("salute_user", "Welcome"+ userArray[i]+"to home.");
+				
 				break;
 			} else {
 				request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
