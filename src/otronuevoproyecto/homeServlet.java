@@ -34,29 +34,29 @@ public class homeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	     user bibi = new user();
+	     User bibi = new User();
 	     bibi.setId("id01");
 	     bibi.setEmail("bibi@banana.com");
 	     bibi.setPassword("1234");
 	        
-	     user jose = new user();
+	     User jose = new User();
 	     bibi.setId("id02");
 	     bibi.setEmail("jose@banana.com");
 	     bibi.setPassword("laquegustes");
 	     
-	     user rodri = new user();
+	     User rodri = new User();
 	     bibi.setId("id03");
 	     bibi.setEmail("rodri@banana.com");
 	     bibi.setPassword("hola123");
 	     
-	     user fernando = new user();
+	     User fernando = new User();
 	     bibi.setId("id04");
 	     bibi.setEmail("fernando@banana.com");
 	     bibi.setPassword("faltadani");
 	            
-	     user[] userArray = {bibi, jose, rodri, fernando};
+	     User[] userArray = {bibi, jose, rodri, fernando};
 	     
-	     task task1 = new task();
+	     Task task1 = new Task();
 	     task1.setDescription("descripcion1");
 	     task1.setName("name1");
 	     task1.setNotes("notes1");
@@ -64,7 +64,7 @@ public class homeServlet extends HttpServlet {
 	     task1.setEndDate("30_01_2018");
 	     task1.setUsername(bibi.getId());
 	     
-	     task task2 = new task();
+	     Task task2 = new Task();
 	     task1.setDescription("descripcion2");
 	     task1.setName("name2");
 	     task1.setNotes("notes2");
@@ -72,7 +72,7 @@ public class homeServlet extends HttpServlet {
 	     task1.setEndDate("30_01_2018");
 	     task1.setUsername(rodri.getId());
 	     
-	     task task3 = new task();
+	     Task task3 = new Task();
 	     task1.setDescription("descripcion3");
 	     task1.setName("name3");
 	     task1.setNotes("notes3");
@@ -80,7 +80,7 @@ public class homeServlet extends HttpServlet {
 	     task1.setEndDate("30_01_2018");
 	     task1.setUsername(jose.getId());
 	     
-	     task[] taskArray = {task1,task2,task3};
+	     Task[] taskArray = {task1,task2,task3};
 	        
 //        request.setAttribute("testParam", "DESDE EL SERVLET");        
 //        request.setAttribute("userArray", userArray);    
