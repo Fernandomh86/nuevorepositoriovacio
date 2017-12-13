@@ -21,11 +21,13 @@
 			<h1>Mis Tareas</h1>
 			<table id= "misTareas" style="width:100%">
 				  <tr id="Cabecera tabla">
-				    <th>Tarea</th>
+				    <th>${userTask}</th>
 				    <th>Estado</th> 
 				    <th>Fecha limite</th>
 				    <th>Acciones</th>
 				  </tr>
+				  <tr id= "nuevatarea">
+				  	<th>${newTask}</th>
 				  <tr id="tarea1">
 				    <td id="T1">Subir a produccion</td>
 				    <td>Pendiente</td>
