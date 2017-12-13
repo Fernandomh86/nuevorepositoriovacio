@@ -5,9 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
+import javax.servlet.http.HttpServletResponse;;
 /**
  * Servlet implementation class homeServlet
  */
@@ -27,6 +25,12 @@ public class homeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		 
+		 User loginUser = new User();
+         loginUser.setId(request.getParameter("id"));
+		 loginUser.setEmail(request.getParameter("email"));//gets a parameter from form input email when submit
+         loginUser.setPassword(request.getParameter("password"));//gets a parameter from form input password when submit
+		
 		 User bibi = new User();
 	     bibi.setId("id01");
 	     bibi.setEmail("bibi@banana.com");
@@ -48,6 +52,14 @@ public class homeServlet extends HttpServlet {
 	     bibi.setPassword("faltadani");
 	            
 	     User[] userArray = {bibi, jose, rodri, fernando};
+	     
+	     Task taskMother = new Task();
+	     taskMother.setDescription(request.getParameter("description"));
+	     taskMother.setName(request.getParameter("name"));
+	     taskMother.setNotes(request.getParameter("notes"));
+	     taskMother.setInitialDate(request.getParameter("initialDate"));
+	     taskMother.setEndDate(request.getParameter("endDate"));
+	     taskMother.setUsername(request.getParameter("userName"));
 	     
 	     Task task1 = new Task();
 	     task1.setDescription("descripcion1");
@@ -73,10 +85,15 @@ public class homeServlet extends HttpServlet {
 	     task1.setEndDate("30_01_2018");
 	     task1.setUsername(jose.getId());
 	     
-	     HttpSession session = request.getSession(); 
-	     
-
 	     Task[] taskArray = {task1,task2,task3};
+	     
+	     for (int i = 0; i<taskArray.length; i++) {
+	    	 if (taskMother.getUsername() == loginUser.getId()) {
+	    		 request.setAttribute("taskUser", taskArray[i]);
+	    	 }
+	     }
+	     
+//	     HttpSession session = request.getSession(); 
 	}
 
 	/**
