@@ -5,6 +5,16 @@ public class user {
 	private String email;
 	private String password;
 	
+	public user() {
+		
+	}
+	public user(String id, String email, String password) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.password = password;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -35,6 +45,7 @@ public class user {
 	public void logOut () {
 	}
 
+<<<<<<< HEAD
 	public user() {
 		super();
 		this.id = id;
@@ -42,6 +53,9 @@ public class user {
 		this.password = password;
 	}
 	
+=======
+
+>>>>>>> branch 'master' of https://github.com/Fernandomh86/nuevorepositoriovacio.git
 }
 
 
