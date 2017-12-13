@@ -4,13 +4,13 @@ public class task {
 	private String name;
 	private String description;
 	private String notes;
-	private int initialDate;
-	private int endDate;
+	private String initialDate;
+	private String endDate;
 	
 	public task() {
 		
 	}
-	public task(String name, String description, String notes, int initialDate, int endDate) {
+	public task(String name, String description, String notes, String initialDate, String endDate) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -43,19 +43,19 @@ public class task {
 		this.notes = notes;
 	}
 
-	public int getInitialDate() {
+	public String getInitialDate() {
 		return initialDate;
 	}
 
-	public void setInitialDate(int initialDate) {
+	public void setInitialDate(String initialDate) {
 		this.initialDate = initialDate;
 	}
 
-	public int getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(int endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 

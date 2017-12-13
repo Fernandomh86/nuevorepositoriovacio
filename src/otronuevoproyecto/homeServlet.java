@@ -60,10 +60,24 @@ public class homeServlet extends HttpServlet {
 	     task1.setDescription("descripcion1");
 	     task1.setName("name1");
 	     task1.setNotes("notes1");
-	     task1.setInitialDate(10012018);
-	     task1.setEndDate(30012018);
+	     task1.setInitialDate("10_01_2018");
+	     task1.setEndDate("30_01_2018");
 	     
-	     task[] taskArray = {};
+	     task task2 = new task();
+	     task1.setDescription("descripcion2");
+	     task1.setName("name2");
+	     task1.setNotes("notes2");
+	     task1.setInitialDate("10_01_2018");
+	     task1.setEndDate("30_01_2018");
+	     
+	     task task3 = new task();
+	     task1.setDescription("descripcion3");
+	     task1.setName("name3");
+	     task1.setNotes("notes3");
+	     task1.setInitialDate("10_01_2018");
+	     task1.setEndDate("30_01_2018");
+	     
+	     task[] taskArray = {task1,task2,task3};
 	        
 //        request.setAttribute("testParam", "DESDE EL SERVLET");        
 //        request.setAttribute("userArray", userArray);    
