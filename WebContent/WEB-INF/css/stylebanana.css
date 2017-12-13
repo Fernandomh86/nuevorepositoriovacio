@@ -1,0 +1,43 @@
+html {
+	font-family: verdana arial;
+	font-size:;
+	font-style: normal;
+	text-decoration: none;
+	color: black;
+	position: relative;
+	text-align: center;
+	background-image: url(background.png); 
+	opacity: 85%;
+}
+
+header {
+	font-style: italic;
+	border-bottom: solid;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+
+}
+
+main {
+	margin: 8%;
+}
+
+input {
+	padding: 8px;
+	margin: 5px;
+}
+
+footer {
+	position: relative;
+	float: bottom;
+	margin-top: 25%;
+}
+
+
+input:visited {
+	color: purple;
+
+}

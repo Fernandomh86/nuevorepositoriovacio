@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Home | Banana Gest</title>
+		<link rel="stylesheet" type="text/css" href="homestyle.css">
 	</head>
 	<body>
 		<header>
