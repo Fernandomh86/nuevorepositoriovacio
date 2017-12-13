@@ -45,17 +45,5 @@ public class user {
 	public void logOut () {
 	}
 
-<<<<<<< HEAD
-	public user() {
-		super();
-		this.id = id;
-		this.email = email;
-		this.password = password;
-	}
-	
-=======
-
->>>>>>> branch 'master' of https://github.com/Fernandomh86/nuevorepositoriovacio.git
 }
-
 

@@ -59,20 +59,7 @@ public class task {
 		this.endDate = endDate;
 	}
 
-<<<<<<< HEAD
-	public task() {
-		// TODO Auto-generated constructor stub
-		super();
-		this.name = name;
-		this.description = description;
-		this.notes = notes;
-		this.initialDate = initialDate;
-		this.endDate = endDate;
-	}
 
-=======
-	//method create task
->>>>>>> branch 'master' of https://github.com/Fernandomh86/nuevorepositoriovacio.git
 	public void createTask() {
 	}
 }
