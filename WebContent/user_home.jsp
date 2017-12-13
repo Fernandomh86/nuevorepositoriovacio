@@ -14,7 +14,7 @@
 				<b style="font-size:50px"> Banana GEST</b>
 				<img src="banana.png" style="width: 15%">
 				<div id="sesion">
-					<a href="bananatoriolog.html"><button>Cerrar Sesión</button></a>
+					<a href="login.jsp"><button>Cerrar Sesión</button></a>
 				</div>
 			</div>
 		</header>
@@ -65,7 +65,7 @@
 		</div>	
 			<div id="botones">
 				<div class="boton1">
-					<a href="bananatorioproyectos.html"><button>Mis proyectos</button></a>
+					<a href="user_hom.jsp"><button>Mis proyectos</button></a>
 			</div>
 				<div class="boton2">
 					<a href="creartarea.html"><button>Nueva tarea</button></a>
