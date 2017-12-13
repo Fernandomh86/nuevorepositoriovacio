@@ -34,8 +34,40 @@ public class homeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	     user bibi = new user();
+	     bibi.setId("id01");
+	     bibi.setEmail("bibi@banana.com");
+	     bibi.setPassword("1234");
+	        
+	     user jose = new user();
+	     bibi.setId("id02");
+	     bibi.setEmail("jose@banana.com");
+	     bibi.setPassword("laquegustes");
+	     
+	     user rodri = new user();
+	     bibi.setId("id03");
+	     bibi.setEmail("rodri@banana.com");
+	     bibi.setPassword("hola123");
+	     
+	     user fernando = new user();
+	     bibi.setId("id04");
+	     bibi.setEmail("fernando@banana.com");
+	     bibi.setPassword("faltadani");
+	            
+	     user[] userArray = {bibi, jose, rodri, fernando};
+	     
+	     task task1 = new task();
+	     task1.setDescription("descripcion1");
+	     task1.setName("name1");
+	     task1.setNotes("notes1");
+	     task1.setInitialDate(10012018);
+	     task1.setEndDate(30012018);
+	     
+	     task[] taskArray = {};
+	        
+//        request.setAttribute("testParam", "DESDE EL SERVLET");        
+//        request.setAttribute("userArray", userArray);    
+//        request.getRequestDispatcher("login.jsp").forward(request, response);
 	}
 
 }

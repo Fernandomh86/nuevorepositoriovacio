@@ -47,7 +47,8 @@ public class task {
 		this.endDate = endDate;
 	}
 
-	public task(String name, String description, String notes, int initialDate, int endDate) {
+	public task() {
+		// TODO Auto-generated constructor stub
 		super();
 		this.name = name;
 		this.description = description;

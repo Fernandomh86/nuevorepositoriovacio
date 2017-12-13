@@ -35,13 +35,13 @@ public class user {
 	public void logOut () {
 	}
 
-	public user(String id, String email, String password) {
+	public user() {
 		super();
 		this.id = id;
 		this.email = email;
 		this.password = password;
 	}
-
+	
 }
 
 
