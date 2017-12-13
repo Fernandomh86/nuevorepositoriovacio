@@ -65,9 +65,9 @@ package otronuevoproyecto;
 			for (int i = 0; i < userArray.length; i++)
 			if (loginUser.getEmail() == userArray[i].getEmail() && loginUser.getPassword() == userArray[i].getPassword()) {
 				request.getRequestDispatcher("home_usuario.jsp").forward(request, response);
-				request.setAttribute("inUser", userArray[i]);
+				request.setAttribute("inUser", userArray[i]); //set attributes for the next 
 				HttpSession mysession = (HttpSession)request.getSession();
-				response.sendRedirect("home_usuario.jsp")
+				response.sendRedirect("/homeServlet");
 			} else {
 				request.getRequestDispatcher("login.jsp").forward(request, response);
 				
