@@ -6,17 +6,19 @@ public class task {
 	private String notes;
 	private String initialDate;
 	private String endDate;
+	private String username;
 	
 	public task() {
 		
 	}
-	public task(String name, String description, String notes, String initialDate, String endDate) {
+	public task(String name, String description, String notes, String initialDate, String endDate, String username) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.notes = notes;
 		this.initialDate = initialDate;
 		this.endDate = endDate;
+		this.username = username;
 	}
 
 	public String getName() {
@@ -59,7 +61,14 @@ public class task {
 		this.endDate = endDate;
 	}
 
-
+	public String getUsername() {
+		return username;
+	}
+	
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	
 	public void createTask() {
 	}
 }

@@ -62,6 +62,7 @@ public class homeServlet extends HttpServlet {
 	     task1.setNotes("notes1");
 	     task1.setInitialDate("10_01_2018");
 	     task1.setEndDate("30_01_2018");
+	     task1.setUsername(bibi.getId());
 	     
 	     task task2 = new task();
 	     task1.setDescription("descripcion2");
@@ -69,6 +70,7 @@ public class homeServlet extends HttpServlet {
 	     task1.setNotes("notes2");
 	     task1.setInitialDate("10_01_2018");
 	     task1.setEndDate("30_01_2018");
+	     task1.setUsername(rodri.getId());
 	     
 	     task task3 = new task();
 	     task1.setDescription("descripcion3");
@@ -76,6 +78,7 @@ public class homeServlet extends HttpServlet {
 	     task1.setNotes("notes3");
 	     task1.setInitialDate("10_01_2018");
 	     task1.setEndDate("30_01_2018");
+	     task1.setUsername(jose.getId());
 	     
 	     task[] taskArray = {task1,task2,task3};
 	        
