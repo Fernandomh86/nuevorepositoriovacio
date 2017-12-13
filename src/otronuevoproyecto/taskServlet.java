@@ -48,8 +48,10 @@ public class taskServlet extends HttpServlet {
 	     
 	     HttpSession mysession = (HttpSession)request.getSession(); // inits session on user_home
 			request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
-			request.setAttribute("newTask", taskMother); //set attributes for the user welcome on user_home
-			response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
+			request.setAttribute("newTask", taskMother); //set attributes for the new task
+			response.sendRedirect("/homeServlet"); // change taskServlet to homeServlet
+			
+//		mysession.getAttribute();//PUT IN HOMESERVLET!!!!!!!!!!!!!!!
 	}
 
 }
