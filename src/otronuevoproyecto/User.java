@@ -1,14 +1,14 @@
 package otronuevoproyecto;
 
-public class user {
+public class User {
 	private String id;
 	private String email;
 	private String password;
 	
-	public user() {
+	public User() {
 		
 	}
-	public user(String id, String email, String password) {
+	public User(String id, String email, String password) {
 		super();
 		this.id = id;
 		this.email = email;

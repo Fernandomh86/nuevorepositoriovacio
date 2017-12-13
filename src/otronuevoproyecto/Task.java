@@ -1,6 +1,6 @@
 package otronuevoproyecto;
 
-public class task {
+public class Task {
 	private String name;
 	private String description;
 	private String notes;
@@ -8,10 +8,10 @@ public class task {
 	private String endDate;
 	private String username;
 	
-	public task() {
+	public Task() {
 		
 	}
-	public task(String name, String description, String notes, String initialDate, String endDate, String username) {
+	public Task(String name, String description, String notes, String initialDate, String endDate, String username) {
 		super();
 		this.name = name;
 		this.description = description;
