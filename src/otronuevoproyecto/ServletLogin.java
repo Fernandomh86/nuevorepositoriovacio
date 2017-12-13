@@ -1,15 +1,13 @@
 package otronuevoproyecto;
 
-	import java.io.IOException;
-import java.io.PrintWriter;
-
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-	import otronuevoproyecto.User;
+
 
 	/**
 	 * Servlet implementation class LoginServlet
@@ -61,23 +59,26 @@ import javax.servlet.http.HttpSession;
 			rodrigo.setPassword("rodrigo5");
 			
 			User[] userArray = {fernando, daniel, joseManuel, bibiana, rodrigo};
+			HttpSession mysession = (HttpSession)request.getSession(); // inits session on user_home
 			
 			
 			for (int i = 0; i < userArray.length; i++)
 			if (loginUser.getEmail() == userArray[i].getEmail() && loginUser.getPassword() == userArray[i].getPassword()) {
 				//if input email & password = userArray email & password, go to user_home, else redirects again to login.jsp + error msg
-				HttpSession mysession = (HttpSession)request.getSession(); // inits session on user_home
+			 // inits session on user_home
 				request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
-				request.setAttribute("inUser", userArray[i]); //set attributes for the user welcome on user_home
 				response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
+				mysession.removeAttribute("error"); //only if you failed to put correct email & password
+				mysession.setAttribute ("salute_user", "Welcome"+ userArray[i]+"to home.");
 				break;
 			} else {
 				request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
-						response.setContentType("text/html");//we are saying that the next println is text for html
-					    PrintWriter out = response.getWriter(); //instance the method getWriter of response to "out"
-					    out.println("<font face=\"verdana\" color=\"red\">We didn't find the introduced data in our database, please retry.</font>"); 
-					    //"out" has a method (println) to show us a msg
+				mysession.setAttribute("error", "We didn't find the introduced data in our database, please retry again.");
+						//Set a map with key "error" and its value, the error msg
 				break;
 			}
+			
+			
+			
 		}
 	}
