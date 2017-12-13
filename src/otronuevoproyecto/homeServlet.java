@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class homeServlet
@@ -81,7 +82,9 @@ public class homeServlet extends HttpServlet {
 	     task1.setUsername(jose.getId());
 	     
 	     task[] taskArray = {task1,task2,task3};
-	        
+	     
+	     HttpSession session = request.getSession(); 
+	     
 //        request.setAttribute("testParam", "DESDE EL SERVLET");        
 //        request.setAttribute("userArray", userArray);    
 //        request.getRequestDispatcher("login.jsp").forward(request, response);
