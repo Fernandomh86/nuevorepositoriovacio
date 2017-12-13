@@ -26,15 +26,7 @@ public class homeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	     User bibi = new User();
+		 User bibi = new User();
 	     bibi.setId("id01");
 	     bibi.setEmail("bibi@banana.com");
 	     bibi.setPassword("1234");
@@ -81,6 +73,13 @@ public class homeServlet extends HttpServlet {
 	     task1.setUsername(jose.getId());
 	     
 	     Task[] taskArray = {task1,task2,task3};
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    
 	        
 //        request.setAttribute("testParam", "DESDE EL SERVLET");        
 //        request.setAttribute("userArray", userArray);    
