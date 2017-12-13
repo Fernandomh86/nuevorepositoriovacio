@@ -1,12 +1,14 @@
 package otronuevoproyecto;
 
 	import java.io.IOException;
-	import javax.servlet.ServletException;
-	import javax.servlet.annotation.WebServlet;
-	import javax.servlet.http.HttpServlet;
-	import javax.servlet.http.HttpServletRequest;
-	import javax.servlet.http.HttpServletResponse;
-	import javax.servlet.http.HttpSession;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 	import otronuevoproyecto.User;
 
 	/**
@@ -23,20 +25,20 @@ package otronuevoproyecto;
 	        super();
 	    }
 
-//		/**
-//		 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-//		 */
-//		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//			response.sendRedirect("login.jsp");
-//		}
+		/**
+		 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+		 */
+		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			response.sendRedirect("login.jsp");//shows login.jsp
+		}
 
 		/**
 		 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 		 */
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			User loginUser = new User();
-			loginUser.setEmail(request.getParameter("email"));
-			loginUser.setPassword(request.getParameter("password"));
+			loginUser.setEmail(request.getParameter("email"));//gets a parameter from form input email when submit
+			loginUser.setPassword(request.getParameter("password"));//gets a parameter from form input password when submit
 			
 			User fernando = new User();
 			fernando.setEmail("fernando1@hotmail.com");
@@ -60,17 +62,22 @@ package otronuevoproyecto;
 			
 			User[] userArray = {fernando, daniel, joseManuel, bibiana, rodrigo};
 			
-			HttpSession session = request.getSession();
 			
 			for (int i = 0; i < userArray.length; i++)
 			if (loginUser.getEmail() == userArray[i].getEmail() && loginUser.getPassword() == userArray[i].getPassword()) {
-				request.getRequestDispatcher("home_usuario.jsp").forward(request, response);
-				request.setAttribute("inUser", userArray[i]); //set attributes for the next 
-				HttpSession mysession = (HttpSession)request.getSession();
-				response.sendRedirect("/homeServlet");
+				//if input email & password = userArray email & password, go to user_home, else redirects again to login.jsp + error msg
+				HttpSession mysession = (HttpSession)request.getSession(); // inits session on user_home
+				request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
+				request.setAttribute("inUser", userArray[i]); //set attributes for the user welcome on user_home
+				response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
+				break;
 			} else {
-				request.getRequestDispatcher("login.jsp").forward(request, response);
-				
+				request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
+						response.setContentType("text/html");//we are saying that the next println is text for html
+					    PrintWriter out = response.getWriter(); //instance the method getWriter of response to "out"
+					    out.println("<font face=\"verdana\" color=\"red\">We didn't find the introduced data in our database, please retry.</font>"); 
+					    //"out" has a method (println) to show us a msg
+				break;
 			}
 		}
 	}
