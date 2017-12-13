@@ -5,6 +5,16 @@ public class user {
 	private String email;
 	private String password;
 	
+	public user() {
+		
+	}
+	public user(String id, String email, String password) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.password = password;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -35,12 +45,6 @@ public class user {
 	public void logOut () {
 	}
 
-	public user(String id, String email, String password) {
-		super();
-		this.id = id;
-		this.email = email;
-		this.password = password;
-	}
 
 }
 

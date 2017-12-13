@@ -6,6 +6,18 @@ public class task {
 	private String notes;
 	private int initialDate;
 	private int endDate;
+	
+	public task() {
+		
+	}
+	public task(String name, String description, String notes, int initialDate, int endDate) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.notes = notes;
+		this.initialDate = initialDate;
+		this.endDate = endDate;
+	}
 
 	public String getName() {
 		return name;
@@ -47,15 +59,7 @@ public class task {
 		this.endDate = endDate;
 	}
 
-	public task(String name, String description, String notes, int initialDate, int endDate) {
-		super();
-		this.name = name;
-		this.description = description;
-		this.notes = notes;
-		this.initialDate = initialDate;
-		this.endDate = endDate;
-	}
-
+	//method create task
 	public void createTask() {
 	}
 }
