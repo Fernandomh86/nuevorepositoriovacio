@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class homeServlet
@@ -72,6 +73,9 @@ public class homeServlet extends HttpServlet {
 	     task1.setEndDate("30_01_2018");
 	     task1.setUsername(jose.getId());
 	     
+	     HttpSession session = request.getSession(); 
+	     
+
 	     Task[] taskArray = {task1,task2,task3};
 	}
 
@@ -81,6 +85,7 @@ public class homeServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    
 	        
+
 //        request.setAttribute("testParam", "DESDE EL SERVLET");        
 //        request.setAttribute("userArray", userArray);    
 //        request.getRequestDispatcher("login.jsp").forward(request, response);
