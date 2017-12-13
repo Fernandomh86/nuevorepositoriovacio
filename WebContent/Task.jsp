@@ -9,7 +9,7 @@
 		<body>
 			<header>Crear tarea</header>
 			<main>	
-				<form method="get" action="bananatoriohome.html" id="formulario">
+				<form method="get" action="user_home.jsp" id="formulario">
 					<table >
 						  <tr>
 							<td>
@@ -47,7 +47,7 @@
 							<td>
 						  </tr>
 					</table>
-					<input type="submit" name="creartarea" value="crear tarea">
+					<input type="submit" name="crear tarea" value="crear tarea" href="user_home.jsp">
 				</form>
 			</main>
 		</body>
