@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Banana GEST</title>
+		<title>Login | Banana Gest</title>
 	</head>
 	<body>
 		<span>${error}</span>
