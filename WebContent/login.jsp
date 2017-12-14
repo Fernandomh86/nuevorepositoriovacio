@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Banana GEST</title>
-		<link rel="stylesheet" type="text/css" href="css/stylebanana.css">
+		<link rel="stylesheet" type="text/css" href="css/generalCSS.css">
 	</head>
 	<body>
 		<span>${error}</span>
@@ -36,6 +36,7 @@
 				<input type="submit" name="submit" value="Iniciar Sesión">
 				<br/>
 			</form>
+				<a href="crearcuenta.html">Crear una cuenta</a>
 			</article> 
 			<footer>
 				<hr/>

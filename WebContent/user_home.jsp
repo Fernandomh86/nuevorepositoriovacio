@@ -6,7 +6,7 @@
 		<head>
 			<meta charset="UTF-8">
 			<title>Home | Banana Gest</title>
-			<link rel="stylesheet" type="text/css" href="css/homestyle.css">
+			<link rel="stylesheet" type="text/css" href="css/user_homeCSS.css">
 		</head>
 		<body>
 			<header>
