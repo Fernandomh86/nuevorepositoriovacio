@@ -5,12 +5,21 @@
 		<head>
 			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 			<title>Crear tarea</title>
-			<link rel="stylesheet" type="text/css" href="stylebanana.css">
+			<link rel="stylesheet" type="text/css" href="css/stylebanana.css">
 		</head>
 		<body>
-			<header>Crear tarea</header>
-			<main>	
-				<form method="get" action="user_home.jsp" id="formulario">
+			<header>
+				<div>
+					<b style="font-size:50px"> Banana GEST</b>
+					<img src="img_css/banana.png" style="width: 15%">
+					<div id="sesion">
+					<a href="login.jsp"><button>Cerrar Sesión</button></a>
+					</div>
+				</div>
+			</header>
+			<main>
+				<h1>Mis Tareas</h1>	
+				<form method="get" action="taskServlet.java" id="formulario">
 					<table >
 						  <tr>
 							<td>
@@ -51,7 +60,7 @@
 							<td>
 						  </tr>
 					</table>
-					<input type="submit" name="crear tarea" value="crear tarea" href="user_home.jsp">
+					<input type="submit" name="crear tarea" value="crear tarea">
 				</form>
 			</main>
 		</body>
