@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Banana GEST</title>
-		<link rel="stylesheet" type="text/css" href="stylebanana.css">
+		<link rel="stylesheet" type="text/css" href="css/stylebanana.css">
 	</head>
 	<body>
 		<span>${error}</span>
@@ -16,7 +16,7 @@
 						Banana GEST
 					</div>
 					<div id="logo" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-						<img src="banana.png">
+						<img src="css/ims_css/banana.png">
 					</div>
 				</div>
 		</header>
@@ -24,10 +24,10 @@
 			<article class="container">
 				<div class="row">
 					<form method="post" action="user_home.jsp">
-						<img src="name.png" style="width: 2%"> 
+						<img src="css/ims_css/name.png" style="width: 2%"> 
 						<input type= "text" name= "email" placeholder="Email" required autofocus/>
 						<br/>
-						<img src="padlock.png" style="width: 2%"> 
+						<img src="css/ims_css/padlock.png" style="width: 2%"> 
 						<input type= "password" name= "password" minlength="8" placeholder="Password" required/>
 						<br/>
 						<br/>

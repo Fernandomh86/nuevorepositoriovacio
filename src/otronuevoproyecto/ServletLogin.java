@@ -38,7 +38,7 @@ import javax.servlet.http.HttpSession;
 			loginUser.setEmail(request.getParameter("email"));//gets a parameter from form input email when submit
 			loginUser.setPassword(request.getParameter("password"));//gets a parameter from form input password when submit
 			
-			boolean error;
+			boolean error=false;
 			
 			User fernando = new User();
 			fernando.setEmail("fernando1@hotmail.com");
@@ -71,7 +71,6 @@ import javax.servlet.http.HttpSession;
 				request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
 				response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
 				mysession.removeAttribute("error"); //only if you failed to put correct email & password
-				error = false;
 				mysession.setAttribute ("identified _user", userArray[i]);
 				break;
 			} else {

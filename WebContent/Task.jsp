@@ -14,6 +14,9 @@
 					<table >
 						  <tr>
 							<td>
+								<p>Name</p>
+								<textarea rows="4" cols="20" name="coment" form="formulario">Name</textarea>
+							<td>
 							   	<p>Descripcion</p>
 								<textarea rows="4" cols="50" name="comment" form="formulario">
 								Enter text here...</textarea>

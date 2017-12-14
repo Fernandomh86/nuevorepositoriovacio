@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="homestyle.css">		
 	</head>
 	<body>
+	<span>${error}</span>
 		<header>
 			<div>
 				<b style="font-size:50px"> Banana GEST</b>
