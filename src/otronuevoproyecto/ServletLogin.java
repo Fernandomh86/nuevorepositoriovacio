@@ -38,6 +38,8 @@ import javax.servlet.http.HttpSession;
 			loginUser.setEmail(request.getParameter("email"));//gets a parameter from form input email when submit
 			loginUser.setPassword(request.getParameter("password"));//gets a parameter from form input password when submit
 			
+			boolean error;
+			
 			User fernando = new User();
 			fernando.setEmail("fernando1@hotmail.com");
 			fernando.setPassword("fernando1");
@@ -69,17 +71,17 @@ import javax.servlet.http.HttpSession;
 				request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
 				response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
 				mysession.removeAttribute("error"); //only if you failed to put correct email & password
-				mysession.setAttribute ("salute_user", "Welcome"+ userArray[i]+"to home.");
-				
+				error = false;
+				mysession.setAttribute ("identified _user", userArray[i]);
 				break;
 			} else {
-				request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
-				mysession.setAttribute("error", "We didn't find the introduced data in our database, please retry again.");
-						//Set a map with key "error" and its value, the error msg
-				break;
+				error = true;
 			}
 			
-			
-			
+			if (error == true) {
+			request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
+			mysession.setAttribute("error", "We didn't find the introduced data in our database, please retry again.");
+					//Set a map with key "error" and its value, the error msg
+			}
 		}
 	}
