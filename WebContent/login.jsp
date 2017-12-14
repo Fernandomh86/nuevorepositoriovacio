@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <jsp:useBean id="user"  scope="session" class="otronuevoproyecto.User">   </jsp:useBean> 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,7 +24,7 @@
 		<main>
 			<article class="container">
 				<div class="row">
-			<form method="get" action="ServletLogin.java">
+			<form method="post"  action="login">
 				<img src="img_css/name.png" style="width: 2%"> 
 				<input type= "text" name= "nombre" placeholder="Usuario/a" required autofocus/>
 				<br/>
