@@ -6,7 +6,7 @@ html {
 	color: black;
 	position: relative;
 	text-align: center;
-	background-image: css/ims_css/background.png; 
+	background-image: url(WebContent/img_css/banana.png); 
 	opacity: 85%;
 }
 
