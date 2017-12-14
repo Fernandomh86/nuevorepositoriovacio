@@ -8,6 +8,7 @@
 		<title>Home_usuario | Banana Gest</title>
 	</head>
 	<body>
+	<span>${error}</span>
 		<header>
 			<div>
 				<b style="font-size:50px"> Banana GEST</b>

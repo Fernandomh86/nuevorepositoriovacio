@@ -26,86 +26,9 @@ public class homeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 
-		 User loginUser = new User();
-         loginUser.setId(request.getParameter("id"));
-		 loginUser.setEmail(request.getParameter("email"));//gets a parameter from form input email when submit
-         loginUser.setPassword(request.getParameter("password"));//gets a parameter from form input password when submit
-		
-		 User bibi = new User();
-	     bibi.setId("id01");
-	     bibi.setEmail("bibi@banana.com");
-	     bibi.setPassword("1234");
-	        
-	     User jose = new User();
-	     bibi.setId("id02");
-	     bibi.setEmail("jose@banana.com");
-	     bibi.setPassword("laquegustes");
-	     
-	     User rodri = new User();
-	     bibi.setId("id03");
-	     bibi.setEmail("rodri@banana.com");
-	     bibi.setPassword("hola123");
-	     
-	     User fernando = new User();
-	     bibi.setId("id04");
-	     bibi.setEmail("fernando@banana.com");
-	     bibi.setPassword("faltadani");
-	            
-	     User[] userArray = {bibi, jose, rodri, fernando};
-	     
-	     Task taskMother = new Task();
-	     taskMother.setDescription(request.getParameter("description"));
-	     taskMother.setName(request.getParameter("name"));
-	     taskMother.setNotes(request.getParameter("notes"));
-	     taskMother.setInitialDate(request.getParameter("initialDate"));
-	     taskMother.setEndDate(request.getParameter("endDate"));
-	     taskMother.setUsername(request.getParameter("userName"));
-	     
-	     Task task1 = new Task();
-	     task1.setDescription("descripcion1");
-	     task1.setName("name1");
-	     task1.setNotes("notes1");
-	     task1.setInitialDate("10_01_2018");
-	     task1.setEndDate("30_01_2018");
-	     task1.setUsername(bibi.getId());
-	     
-	     Task task2 = new Task();
-	     task1.setDescription("descripcion2");
-	     task1.setName("name2");
-	     task1.setNotes("notes2");
-	     task1.setInitialDate("10_01_2018");
-	     task1.setEndDate("30_01_2018");
-	     task1.setUsername(rodri.getId());
-	     
-	     Task task3 = new Task();
-	     task1.setDescription("descripcion3");
-	     task1.setName("name3");
-	     task1.setNotes("notes3");
-	     task1.setInitialDate("10_01_2018");
-	     task1.setEndDate("30_01_2018");
-	     task1.setUsername(jose.getId());
-	     
-	     Task[] taskArray = {task1,task2,task3};
-	     
-	     for (int i = 0; i<taskArray.length; i++) {
-	    	 if (taskMother.getUsername() == loginUser.getId()) {
-	    		 request.setAttribute("taskUser", taskArray[i]);
-	    	 }
-	     }
-	     
-//	     HttpSession session = request.getSession(); 
+
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    
-	        
-
-//        request.setAttribute("testParam", "DESDE EL SERVLET");        
-//        request.setAttribute("userArray", userArray);    
-//        request.getRequestDispatcher("login.jsp").forward(request, response);
-	}
+	
 
 }

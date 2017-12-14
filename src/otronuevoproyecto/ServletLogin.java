@@ -69,7 +69,7 @@ import javax.servlet.http.HttpSession;
 				request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
 				response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
 				mysession.removeAttribute("error"); //only if you failed to put correct email & password
-				mysession.setAttribute ("salute_user", "Welcome"+ userArray[i]+"to home.");
+				mysession.setAttribute ("identified_user", userArray[i]);
 				
 				break;
 			} else {
