@@ -1,7 +1,6 @@
 package otronuevoproyecto;
 
 public class Task {
-	private String name;
 	private String description;
 	private String notes;
 	private String initialDate;
@@ -11,22 +10,13 @@ public class Task {
 	public Task() {
 		
 	}
-	public Task(String name, String description, String notes, String initialDate, String endDate, String username) {
+	public Task(String description, String notes, String initialDate, String endDate, String username) {
 		super();
-		this.name = name;
 		this.description = description;
 		this.notes = notes;
 		this.initialDate = initialDate;
 		this.endDate = endDate;
 		this.username = username;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getDescription() {
