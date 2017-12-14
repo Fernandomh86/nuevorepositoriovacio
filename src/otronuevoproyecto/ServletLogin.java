@@ -69,14 +69,13 @@ import javax.servlet.http.HttpSession;
 				//if input email & password = userArray email & password, go to user_home, else redirects again to login.jsp + error msg
 			 // inits session on user_home
 				request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
-				response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
+				response.sendRedirect("/HomeServlet"); // change ServletLogin to homeServlet
 				mysession.removeAttribute("error"); //only if you failed to put correct email & password
 				mysession.setAttribute ("identified _user", userArray[i]);
 				break;
 			} else {
 				error = true;
 			}
-			
 			if (error == true) {
 			request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
 			mysession.setAttribute("error", "We didn't find the introduced data in our database, please retry again.");
