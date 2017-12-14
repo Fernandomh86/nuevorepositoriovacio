@@ -53,8 +53,8 @@ import javax.servlet.http.HttpSession;
 			joseManuel.setPassword("josemanuel3");
 			
 			User bibiana = new User();
-			fernando.setEmail("bibiana4@hotmail.com");
-			fernando.setPassword("bibiana4");
+			bibiana.setEmail("bibiana4@hotmail.com");
+			bibiana.setPassword("bibiana4");
 			
 			User rodrigo = new User();
 			rodrigo.setEmail("rodrigo5@hotmail.com");

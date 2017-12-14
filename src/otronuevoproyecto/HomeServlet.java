@@ -26,15 +26,6 @@ import javax.servlet.http.HttpSession;
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 
-		 User loginUser = new User();
-         loginUser.setId(request.getParameter("id"));
-		 loginUser.setEmail(request.getParameter("email"));//gets a parameter from form input email when submit
-         loginUser.setPassword(request.getParameter("password"));//gets a parameter from form input password when submit
-		
-
+		response.sendRedirect("user_home.jsp");//servlet attach to user_home.jsp
 	}
-
-
-
 }
