@@ -38,6 +38,7 @@ public class taskServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		
+
 		 Task taskMother = new Task();
 	     taskMother.setName(request.getParameter("name"));
 		 taskMother.setDescription(request.getParameter("description"));
@@ -52,6 +53,6 @@ public class taskServlet extends HttpServlet {
 			response.sendRedirect("/homeServlet"); // change taskServlet to homeServlet
 			
 //		mysession.getAttribute();//PUT IN HOMESERVLET!!!!!!!!!!!!!!!
-			
+
 	}
 }
