@@ -38,6 +38,8 @@ import javax.servlet.http.HttpSession;
 			loginUser.setEmail(request.getParameter("email"));//gets a parameter from form input email when submit
 			loginUser.setPassword(request.getParameter("password"));//gets a parameter from form input password when submit
 			
+			boolean error=false;
+			
 			User fernando = new User();
 			fernando.setEmail("fernando1@hotmail.com");
 			fernando.setPassword("fernando1");
@@ -51,8 +53,8 @@ import javax.servlet.http.HttpSession;
 			joseManuel.setPassword("josemanuel3");
 			
 			User bibiana = new User();
-			fernando.setEmail("bibiana4@hotmail.com");
-			fernando.setPassword("bibiana4");
+			bibiana.setEmail("bibiana4@hotmail.com");
+			bibiana.setPassword("bibiana4");
 			
 			User rodrigo = new User();
 			rodrigo.setEmail("rodrigo5@hotmail.com");
@@ -69,17 +71,16 @@ import javax.servlet.http.HttpSession;
 				request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
 				response.sendRedirect("/homeServlet"); // change ServletLogin to homeServlet
 				mysession.removeAttribute("error"); //only if you failed to put correct email & password
-				mysession.setAttribute ("identified_user", userArray[i]);
-				
+				mysession.setAttribute ("identified _user", userArray[i]);
 				break;
 			} else {
-				request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
-				mysession.setAttribute("error", "We didn't find the introduced data in our database, please retry again.");
-						//Set a map with key "error" and its value, the error msg
-				break;
+				error = true;
 			}
 			
-			
-			
+			if (error == true) {
+			request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
+			mysession.setAttribute("error", "We didn't find the introduced data in our database, please retry again.");
+					//Set a map with key "error" and its value, the error msg
+			}
 		}
 	}

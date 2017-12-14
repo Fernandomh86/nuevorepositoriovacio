@@ -5,7 +5,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Home_usuario | Banana Gest</title>
+		<title>Home | Banana Gest</title>
+		<link rel="stylesheet" type="text/css" href="homestyle.css">		
 	</head>
 	<body>
 	<span>${error}</span>
@@ -14,7 +15,7 @@
 				<b style="font-size:50px"> Banana GEST</b>
 				<img src="banana.png" style="width: 15%">
 				<div id="sesion">
-					<a href="bananatoriolog.html"><button>Cerrar Sesión</button></a>
+					<a href="login.jsp"><button>Cerrar Sesión</button></a>
 				</div>
 			</div>
 		</header>
@@ -65,7 +66,7 @@
 		</div>	
 			<div id="botones">
 				<div class="boton1">
-					<a href="bananatorioproyectos.html"><button>Mis proyectos</button></a>
+					<a href="user_hom.jsp"><button>Mis proyectos</button></a>
 			</div>
 				<div class="boton2">
 					<a href="creartarea.html"><button>Nueva tarea</button></a>

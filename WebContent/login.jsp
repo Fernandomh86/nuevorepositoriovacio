@@ -5,7 +5,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Login | Banana Gest</title>
+		<title>Banana GEST</title>
+		<link rel="stylesheet" type="text/css" href="stylebanana.css">
 	</head>
 	<body>
 		<span>${error}</span>
