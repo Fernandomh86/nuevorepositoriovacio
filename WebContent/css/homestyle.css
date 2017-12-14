@@ -1,5 +1,5 @@
 html {
-	background-image: url(yellow.jpg);
+	background-image: url(img_css/yellow.jpg);
 	text-align: center;
 	position: relative;
 	width: 100%;
@@ -8,6 +8,14 @@ html {
 header {
 	margin-bottom: 5%;
 	font-style: italic;
+	border-bottom: solid;
+}
+
+table {
+	border: solid;
+}
+
+th {
 	border-bottom: solid;
 }
 
