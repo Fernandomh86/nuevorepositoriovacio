@@ -23,7 +23,7 @@
 		<main>
 			<article class="container">
 				<div class="row">
-			<form method="get" action="ServletLogin.java">
+			<form method="post"  action="ServletLogin.java">
 				<img src="img_css/name.png" style="width: 2%"> 
 				<input type= "text" name= "nombre" placeholder="Usuario/a" required autofocus/>
 				<br/>
