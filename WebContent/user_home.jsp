@@ -21,44 +21,49 @@
 			<div id="tareas">
 				<h1>Mis Tareas</h1>
 				<table id= "misTareas" style="width:100%">
-					  <tr id="Cabecera tabla">
+					<tr id="Cabecera tabla">
 					    <th>Tarea</th>
-					    <th>Estado</th> 
+					    <th>Fecha inicio</th> 
 					    <th>Fecha limite</th>
 					    <th>Acciones</th>
-					  </tr>
-					  <tr id="tarea1">
+					</tr>
+					<tr id="nuevatarea">
+                    	<th>${newTaskName}</th>
+                    	<td>${newTaskInitialDate}</td>
+                    	<td>${newTaskEndDate}</td>
+                  	</tr>
+					<tr id="tarea1">
 					    <td id="T1">Subir a produccion</td>
-					    <td>Pendiente</td>
+					    <td>09/11/2017</td>
 					    <td>10/11/2017</td>
 					    <td>
 					    	<a href="Task.jsp"><button onclick="editarTarea()">Editar</button></a><button onclick="borrarTarea()">Borrar</button>
-					    </td>
-					  </tr>
-					  <tr id="tarea2">
+						</td>
+					</tr>
+					<tr id="tarea2">
 					    <td id="T2">Limpiar codigo fuente</td>
-					    <td>Terminada</td>
+					    <td>50/14/2017</td>
 					    <td>08/11/2017</td>
 					    <td>
 					    	<a href="Task.jsp"><button onclick="editarTarea()">Editar</button></a><button onclick="borrarTarea2()">Borrar</button>
 					    </td>
-					  </tr>
+					</tr>
 					  <tr id="tarea3">
 					    <td id="T3">Presentar el proyecto</td>
-					    <td>En proceso</td>
+					    <td>55/16/2017</td>
 					    <td>09/11/2017</td>
 					   	<td>
 					   		<a href="Task.jsp"><button onclick="editarTarea()">Editar</button></a><button onclick="borrarTarea3()">Borrar</button>
 					   	</td>
-					  </tr>
+					</tr>
 					  <tr id="tarea4">
 					    <td id="T4">Hacer la colada</td>
-					    <td>Nunca</td>
+					    <td>68/48/1235</td>
 					    <td>32/11/2017</td>
 					    <td>
 					    	<a href="Task.jsp"><button onclick="editarTarea()">Editar</button></a><button onclick="borrarTarea4()">Borrar</button>
 					    </td>
-					  </tr>
+					</tr>
 				</table>
 			</div>	
 			<div id="botones">
