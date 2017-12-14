@@ -1,13 +1,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- <jsp:useBean id="user"  scope="session" class="otronuevoproyecto.User">   </jsp:useBean> 
+<%--   <jsp:useBean id="user"  scope="session" class="otronuevoproyecto.User">   </jsp:useBean>  --%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>Banana GEST</title>
-		<link rel="stylesheet" type="text/css" href="css/stylebanana.css">
+		<link rel="stylesheet" type="text/css" href="css/generalCSS.css">
 	</head>
 	<body>
 		<span>${error}</span>
@@ -26,7 +26,7 @@
 				<div class="row">
 			<form method="post"  action="login">
 				<img src="img_css/name.png" style="width: 2%"> 
-				<input type= "text" name= "nombre" placeholder="Usuario/a" required autofocus/>
+				<input type= "text" name= "email" placeholder="Email" required autofocus/>
 				<br/>
 				<img src="img_css/padlock.png" style="width: 2%"> 
 				<input type= "password" name= "password" minlength="8" placeholder="Contraseña" required/>
@@ -37,6 +37,7 @@
 				<input type="submit" name="submit" value="Iniciar Sesión">
 				<br/>
 			</form>
+				<a href="crearcuenta.html">Crear una cuenta</a>
 			</article> 
 			<footer>
 				<hr/>
