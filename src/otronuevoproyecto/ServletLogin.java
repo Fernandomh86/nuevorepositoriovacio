@@ -76,7 +76,6 @@ import javax.servlet.http.HttpSession;
 			} else {
 				error = true;
 			}
-			
 			if (error == true) {
 			request.getRequestDispatcher("login.jsp").forward(request, response); //redirects again to login.jsp
 			mysession.setAttribute("error", "We didn't find the introduced data in our database, please retry again.");
