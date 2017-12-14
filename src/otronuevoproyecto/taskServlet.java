@@ -40,7 +40,8 @@ public class taskServlet extends HttpServlet {
 		
 
 		 Task taskMother = new Task();
-	     taskMother.setDescription(request.getParameter("description"));
+	     taskMother.setName(request.getParameter("name"));
+		 taskMother.setDescription(request.getParameter("description"));
 	     taskMother.setNotes(request.getParameter("notes"));
 	     taskMother.setInitialDate(request.getParameter("initialDate"));
 	     taskMother.setEndDate(request.getParameter("endDate"));
