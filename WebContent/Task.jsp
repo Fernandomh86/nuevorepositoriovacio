@@ -19,9 +19,9 @@
 			</header>
 			<main>
 				<h1>Mis Tareas</h1>	
-				<form method="get" action="taskServlet.java" id="formulario">
+				<form method="post" action="/taskServlet" id="formulario">
 					<table >
-						  <tr>
+						<tr>
 							<td>
 								<p>Name</p>
 								<textarea rows="4" cols="20" name="coment" form="formulario">Name</textarea>
@@ -58,7 +58,7 @@
 								</datalist>
 								<input type="text" list="tareas">
 							<td>
-						  </tr>
+						 </tr>
 					</table>
 					<input type="submit" name="crear tarea" value="crear tarea">
 				</form>
