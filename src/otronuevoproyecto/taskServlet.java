@@ -24,6 +24,8 @@ public class taskServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	
+    }
         // TODO Auto-generated method stub
     /**
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -37,12 +39,12 @@ public class taskServlet extends HttpServlet {
          newTask.setNotes(request.getParameter("notes"));
          newTask.setInitialDate(request.getParameter("initialDate"));
          newTask.setEndDate(request.getParameter("endDate"));
-         newTask.setResponsable(request.getParameter("responsable"));
+         //newTask.setResponsable(request.getParameter("responsable"));
 
             request.getRequestDispatcher("user_home.jsp").forward(request, response); // send us to user_home.jsp
-            request.setAttribute("newTaskName", taskMother.getName()); //set attributes for the new task
-            request.setAttribute("newTaskInitialDate", taskMother.getInitialDate());
-            request.setAttribute("newTaskEndDate", taskMother.getEndDate());
+            request.setAttribute("newTaskName", newTask.getName()); //set attributes for the new task
+            request.setAttribute("newTaskInitialDate", newTask.getInitialDate());
+            request.setAttribute("newTaskEndDate", newTask.getEndDate());
             response.sendRedirect("/homeServlet"); // change taskServlet to homeServlet
             
 //        mysession.getAttribute();//PUT IN HOMESERVLET!!!!!!!!!!!!!!!
